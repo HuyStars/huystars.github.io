@@ -10,6 +10,7 @@ body{
     align-items: center;
     min-height: 100vh;
     background: linear-gradient(to right, #FF7B89,#8A5082);
+    overflow: hidden;
 }
 .card{
     width: 300px;
@@ -45,6 +46,37 @@ body{
         transform: translate(-50%,-50%) rotate(360deg);
     }
 }
+
+@keyframes snowing {
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(0,110vh,0);
+    }
+}
+
+.snow{
+    width: 1vw;
+    height: 1vw;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: -10vh;
+    filter: blur(1px);
+    left: calc(10vw * var(--i));
+    animation: snowing calc(1s * var(--i)) linear infinite;
+    animation-delay: -35s;
+}
+
+.g {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(#fde2b0,#fff);
+    height: 100px;
+    width: 100vw;
+}
+
 .card .lines::after{
     position: absolute;
     content: '';
@@ -215,6 +247,9 @@ body{
         opacity: 1;
     }
 }
+
+.follow{
+}
 .follow .fb{
     position: relative;
 }
@@ -290,3 +325,26 @@ body{
     border: 3px solid #1285e2;
     animation: fb 2s linear infinite;
 }
+
+audio {
+    width: 100%; 
+    margin-top: 20px; 
+    background-color: #f5f5f5;
+    padding: 10px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng cho phần audio */
+}
+
+
+audio::-webkit-media-controls {
+    background-color: #fff; 
+    border-radius: 6px; 
+}
+
+audio::-webkit-media-controls-play-button {
+    color: #333; 
+}
+
+
+
+  
