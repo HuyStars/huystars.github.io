@@ -56,10 +56,16 @@
                 </div>
             </div>
         </div>
-        <audio id="myAudio" src="buitruong.mp3" controls autoplay></audio>
+        <audio id="myAudio" src="buitruong.mp3" controls autoplay onended="restartAudio()"></audio>
     </div>
 </body>
 <script>
+    function restartAudio() {
+        var audio = document.getElementById("myAudio");
+        audio.currentTime = 0; // Set the playback time to the beginning
+        audio.play();
+    }
+
     window.onload = function () {
         var audio = document.getElementById("myAudio");
         audio.play();
