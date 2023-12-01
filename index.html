@@ -62,12 +62,14 @@
 <script>
     function restartAudio() {
         var audio = document.getElementById("myAudio");
+        audio.volume = 0.2;
         audio.currentTime = 0; // Set the playback time to the beginning
         audio.play();
     }
 
     window.onload = function () {
         var audio = document.getElementById("myAudio");
+        audio.volume = 0.2;
         audio.play();
     }
 </script>
