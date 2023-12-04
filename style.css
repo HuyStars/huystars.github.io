@@ -9,7 +9,10 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(to right, #FF7B89,#8A5082);
+    background-image: url('bgr2.jpg');
+    /* background: linear-gradient(to right, #FF7B89,#8A5082); */
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow: hidden;
 }
 .card{
@@ -19,6 +22,30 @@ body{
     transition: all 0.5s;
     box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.5);
 }
+
+.christmas-tree{
+    position: absolute;
+    width: 100%;
+    top: 35%;
+    left: 1%;
+}
+.christmas-tree img{
+    position: absolute;
+    width: 500px;
+    /* top: 50%; */
+}
+.house{
+    position: absolute;
+    width: 450px;
+    height: 100vh;
+    top: 15%;
+    right: 5%;
+}
+.house img{
+    position: absolute;
+    width: 450px;
+}
+
 .card:hover{
     height: 400px;
 }
@@ -342,6 +369,7 @@ audio::-webkit-media-controls {
 audio::-webkit-media-controls-play-button {
     color: #333; 
 }
+
 
 
 
